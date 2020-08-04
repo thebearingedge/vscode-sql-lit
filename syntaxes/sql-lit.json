@@ -1,0 +1,53 @@
+{
+  "scopeName": "inline.sql-lit",
+  "fileTypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "vue"
+  ],
+  "injectionSelector": "L:source -comment -string",
+  "patterns": [
+    {
+      "name": "sql-template-literal",
+      "contentName": "meta.embedded.block.sql",
+      "begin": "[sS][qQ][lL]\\s*(<.+>)?(\\s*`)",
+      "beginCaptures": {
+        "0": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "1": {
+          "patterns": [
+            {
+              "include": "source.ts#type-arguments"
+            }
+          ]
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
+      "end": "(`)",
+      "endCaptures": {
+        "0": {
+          "name": "string.js"
+        },
+        "1": {
+          "name": "punctuation.definition.string.template.end.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.plpgsql.postgres"
+        },
+        {
+          "include": "source.sql"
+        }
+      ]
+    }
+  ]
+}

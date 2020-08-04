@@ -1,0 +1,46 @@
+{
+  "name": "vscode-sql-lit",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "license": "MIT",
+  "displayName": "SQL Lit",
+  "description": "Tagged template literal syntax highlighting for SQL.",
+  "publisher": "thebearingedge",
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "keywords": [
+    "tagged",
+    "template",
+    "literal",
+    "syntax",
+    "highlighting",
+    "sql"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "source.vue"
+        ],
+        "scopeName": "inline.sql-lit",
+        "path": "./syntaxes/sql-lit.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.sql": "sql"
+        }
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebearingedge/sql-lit.git"
+  }
+}
