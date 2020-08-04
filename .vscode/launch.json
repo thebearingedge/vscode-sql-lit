@@ -7,7 +7,7 @@
       "request": "launch",
       "runtimeExecutable": "${execPath}",
       "args": [
-        "${workspaceFolder}/test/",
+        "${workspaceFolder}/samples/index.ts",
         "--extensionDevelopmentPath=${workspaceRoot}"
       ]
     }
