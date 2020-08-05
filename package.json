@@ -1,13 +1,13 @@
 {
   "name": "vscode-sql-lit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
     "vscode": "^1.22.0"
   },
   "license": "MIT",
   "displayName": "SQL Lit",
   "icon": "images/sql-lit.png",
-  "description": "Tagged template literal syntax highlighting for SQL.",
+  "description": "Syntax highlighting for SQL tagged template literals in JavaScript.",
   "publisher": "thebearingedge",
   "categories": [
     "Programming Languages",
@@ -19,7 +19,8 @@
     "literal",
     "syntax",
     "highlighting",
-    "sql"
+    "sql",
+    "javascript"
   ],
   "contributes": {
     "grammars": [
@@ -42,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thebearingedge/sql-lit.git"
+    "url": "https://github.com/thebearingedge/vscode-sql-lit"
   }
 }

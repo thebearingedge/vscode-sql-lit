@@ -2,7 +2,7 @@
 
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/thebearingedge.vscode-sql-lit.svg)](https://marketplace.visualstudio.com/items?itemName=thebearingedge.vscode-sql-lit)
 
-Syntax highlighting for SQL template literals in JavaScript.
+Syntax highlighting for SQL tagged template literals in JavaScript.
 
 ## Samples
 
