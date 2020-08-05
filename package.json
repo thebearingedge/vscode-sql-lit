@@ -1,11 +1,12 @@
 {
   "name": "vscode-sql-lit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.22.0"
   },
   "license": "MIT",
   "displayName": "SQL Lit",
+  "icon": "images/sql-lit.png",
   "description": "Tagged template literal syntax highlighting for SQL.",
   "publisher": "thebearingedge",
   "categories": [
