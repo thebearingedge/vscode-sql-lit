@@ -1,17 +1,15 @@
 {
   "scopeName": "inline.sql-lit",
-  "fileTypes": [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "vue"
-  ],
-  "injectionSelector": "L:source -comment -string",
+  "fileTypes": [],
+  "injectionSelector": "L:source -comment -string, L:markup.fenced_code.block.markdown (meta.embedded.block.javascript, meta.embedded.block.typescript, meta.embedded.block.typescriptreact, meta.embedded.block.vue)",
   "patterns": [
     {
-      "name": "sql-template-literal",
-      "contentName": "meta.embedded.block.sql",
+      "include": "#sql-template-literal"
+    }
+  ],
+  "repository": {
+    "sql-template-literal": {
+      "name": "meta.embedded.block.sql",
       "begin": "[sS][qQ][lL]\\s*(<.+>)?(\\s*`)",
       "beginCaptures": {
         "0": {
@@ -49,5 +47,5 @@
         }
       ]
     }
-  ]
+  }
 }
