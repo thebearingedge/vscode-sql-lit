@@ -4,6 +4,12 @@
 
 Syntax highlighting for SQL tagged template literals in JavaScript.
 
+Pairs nicely with the following packages:
+
+- [`pg-lit`](https://www.npmjs.com/package/pg-lit)
+- [`postgres`](https://www.npmjs.com/package/postgres)
+- [`sql-template-strings`](https://www.npmjs.com/package/sql-template-strings)
+
 ## Samples
 
 ### Basic Tag

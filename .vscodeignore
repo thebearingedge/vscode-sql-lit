@@ -1,2 +1,4 @@
 **/*.ts
 .vscode
+images
+!images/sql-lit.png
