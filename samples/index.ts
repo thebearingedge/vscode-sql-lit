@@ -15,6 +15,7 @@ const interpolated = sql`
 declare const sql: {
   <_>(strings: TemplateStringsArray, ...values: any[]): _
   identifier: (names: string[]) => void;
+  Person: (strings: TemplateStringsArray, ...values: any[]) => void
 }
 
 const typed = sql<{ one: number }>`select 1 as "one"`
@@ -38,3 +39,5 @@ const slonik = sql`
   SELECT 1
   FROM ${sql.identifier(['bar', 'baz'])}
 `;
+
+const slonikTypegen = sql.Person`select * from person limit 2`;
