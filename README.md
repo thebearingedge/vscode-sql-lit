@@ -30,6 +30,14 @@ Pairs nicely with the following packages:
 
 ![PL/PgSQL](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/plpgsql.png)
 
+### Slonik
+
+![Slonik Methods](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik.png)
+
+### Slonik Typegen
+
+![Slonik Typegen](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik-typegen.png)
+
 ## File Types
 
 - .js
