@@ -10,19 +10,19 @@
   "repository": {
     "sql-template-literal": {
       "name": "meta.embedded.block.sql",
-      "begin": "[sS][qQ][lL]\\s*(<.+>)?(\\s*`)",
+      "begin": "[sS][qQ][lL]\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\s*`)",
       "beginCaptures": {
         "0": {
           "name": "entity.name.function.tagged-template.js"
         },
-        "1": {
+        "2": {
           "patterns": [
             {
               "include": "source.ts#type-arguments"
             }
           ]
         },
-        "2": {
+        "3": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },

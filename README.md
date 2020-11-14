@@ -9,6 +9,8 @@ Pairs nicely with the following packages:
 - [`pg-lit`](https://www.npmjs.com/package/pg-lit)
 - [`postgres`](https://www.npmjs.com/package/postgres)
 - [`sql-template-strings`](https://www.npmjs.com/package/sql-template-strings)
+- [`slonik`](https://www.npmjs.com/package/slonik)
+- [`@slonik/typegen`](https://www.npmjs.com/package/@slonik/typegen)
 
 ## Samples
 
