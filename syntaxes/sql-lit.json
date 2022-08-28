@@ -23,6 +23,13 @@
           ]
         },
         "3": {
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        "4": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },
