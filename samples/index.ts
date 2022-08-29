@@ -15,13 +15,16 @@ const interpolated = sql`
 type Person = {}
 type IdentifierSqlTokenType = {}
 
+declare const personSchema: {}
+
 declare const sql: {
   <T>(strings: TemplateStringsArray, ...values: any[]): T
   identifier: (names: string[]) => IdentifierSqlTokenType;
   Person: (strings: TemplateStringsArray, ...values: any[]) => Person
+  type: (schema: any) => (strings: TemplateStringsArray, ...values: any[]) => Person
 }
 
-const typed = sql<{ one: number }>`select 1 as "one"`
+const typed = sql<[{ one: number }]>`select 1 as "one"`
 
 const slonik = sql`
   select 1
@@ -29,6 +32,12 @@ const slonik = sql`
 `;
 
 const slonikTypegen = sql.Person`select * from person limit 2`;
+
+const slonikZod = sql.type(personSchema)`
+  select "id",
+         "username"
+    from "person"
+`
 
 const plpgsql = sql`
   create function util._trigger_timestamps() returns trigger as $$

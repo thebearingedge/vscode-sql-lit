@@ -1,13 +1,13 @@
 {
   "name": "vscode-sql-lit",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "engines": {
     "vscode": "^1.22.0"
   },
   "license": "MIT",
   "displayName": "SQL Lit",
   "icon": "images/sql-lit.png",
-  "description": "Syntax highlighting for SQL tagged template literals in JavaScript.",
+  "description": "Syntax highlighting for SQL tagged template literals in JavaScript and TypeScript.",
   "publisher": "thebearingedge",
   "categories": [
     "Programming Languages",
@@ -17,10 +17,12 @@
     "tagged",
     "template",
     "literal",
+    "strings",
     "syntax",
     "highlighting",
     "sql",
-    "javascript"
+    "javascript",
+    "slonik"
   ],
   "contributes": {
     "grammars": [

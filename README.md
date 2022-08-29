@@ -2,15 +2,14 @@
 
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/thebearingedge.vscode-sql-lit.svg)](https://marketplace.visualstudio.com/items?itemName=thebearingedge.vscode-sql-lit)
 
-Syntax highlighting for SQL tagged template literals in JavaScript.
+Syntax highlighting for SQL tagged template literals in JavaScript and TypeScript.
 
 Pairs nicely with the following packages:
 
-- [`pg-lit`](https://www.npmjs.com/package/pg-lit)
 - [`postgres`](https://www.npmjs.com/package/postgres)
-- [`sql-template-strings`](https://www.npmjs.com/package/sql-template-strings)
 - [`slonik`](https://www.npmjs.com/package/slonik)
 - [`@slonik/typegen`](https://www.npmjs.com/package/@slonik/typegen)
+- [`sql-template-strings`](https://www.npmjs.com/package/sql-template-strings)
 
 ## Samples
 
@@ -22,7 +21,7 @@ Pairs nicely with the following packages:
 
 ![Interpolated Values](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/interpolated.png)
 
-### Type Arguments
+### TypeScript
 
 ![Type Argument](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/typed.png)
 
@@ -37,6 +36,10 @@ Pairs nicely with the following packages:
 ### Slonik Typegen
 
 ![Slonik Typegen](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik-typegen.png)
+
+### Slonik Validation
+
+![Slonik Validation](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik-validation.png)
 
 ## File Types
 
