@@ -10,7 +10,7 @@
   "repository": {
     "sql-template-literal": {
       "name": "meta.embedded.block.sql",
-      "begin": "[sS][qQ][lL]\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\s*`)",
+      "begin": "[sS][qQ][lL]\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\(.+\\))?(\\s*`)",
       "beginCaptures": {
         "0": {
           "name": "entity.name.function.tagged-template.js"
@@ -23,6 +23,13 @@
           ]
         },
         "3": {
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        "4": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },
