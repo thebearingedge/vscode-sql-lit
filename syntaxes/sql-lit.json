@@ -5,6 +5,9 @@
   "patterns": [
     {
       "include": "#sql-template-literal"
+    },
+    {
+      "include": "#sql-template-literal-comment"
     }
   ],
   "repository": {
@@ -30,6 +33,38 @@
           ]
         },
         "4": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
+      "end": "(`)",
+      "endCaptures": {
+        "0": {
+          "name": "string.js"
+        },
+        "1": {
+          "name": "punctuation.definition.string.template.end.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.plpgsql.postgres"
+        },
+        {
+          "include": "source.sql"
+        }
+      ]
+    },
+    "sql-template-literal-comment": {
+      "name": "meta.embedded.block.sql",
+      "begin": "(?i)(?:\\/\\*\\s*(?:sql|db)\\s*\\*\\/)(\\s*`)",
+      "beginCaptures": {
+        "0": {
+          "name": "comment"
+        },
+        "1": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },
