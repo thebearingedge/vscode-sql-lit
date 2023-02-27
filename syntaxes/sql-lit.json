@@ -13,7 +13,7 @@
   "repository": {
     "sql-template-literal": {
       "name": "meta.embedded.block.sql",
-      "begin": "(?i)(?:sql|db)\\w*\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\(.+\\))?(\\s*`)",
+      "begin": "(?i)(?:sql|db)\\w*\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\([^)]+\\))?(\\s*`)",
       "beginCaptures": {
         "0": {
           "name": "entity.name.function.tagged-template.js"
