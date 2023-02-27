@@ -53,3 +53,16 @@ const plpgsql = sql`
     end;
   $$ language plpgsql;
 `
+
+declare const DATABASE_EXTENSIONS_SCHEMA_NAME: string
+
+const rawCommentPrefixed = /* sql */`
+  begin
+    return trim(
+      both '-' from regexp_replace(
+        lower("${DATABASE_EXTENSIONS_SCHEMA_NAME}".unaccent(trim(v))),
+        '[^a-z0-9_-]+', '-', 'gi'
+      )
+    );
+  end;
+`
