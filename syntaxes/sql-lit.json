@@ -94,6 +94,45 @@
           "include": "source.sql"
         }
       ]
+    },
+    "sql-lit-higher-order-tag": {
+      "name": "meta.embedded.block.sql",
+      "begin": "(?i)(?:sql|db)\\w*\\s*\\.([_$[:alpha:]][_$[:alnum:]]*)(\\([^)]*\\))\\s*(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "source.ts#expression"
+            }
+          ]
+        },
+        "3": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
+      "end": "(`)",
+      "endCaptures": {
+        "0": {
+          "name": "string.js"
+        },
+        "1": {
+          "name": "punctuation.definition.string.template.end.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.plpgsql.postgres"
+        },
+        {
+          "include": "source.sql"
+        }
+      ]
     }
   }
 }
