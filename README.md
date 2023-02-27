@@ -9,6 +9,13 @@ Pairs nicely with the following packages:
 - [`@slonik/typegen`](https://www.npmjs.com/package/@slonik/typegen)
 - [`sql-template-strings`](https://www.npmjs.com/package/sql-template-strings)
 
+## Main Features
+
+SQL syntax highlighting is triggered in a couple of ways:
+
+- tagged template literals via a `sql*` or `db*` identifier.
+- template literals via a `/* sql */` or `/* db */` comment prefix.
+
 ## Samples
 
 ### Basic Tag
@@ -37,7 +44,11 @@ Pairs nicely with the following packages:
 
 ### Slonik Validation
 
-![Slonik Validation](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik-validation.png)
+![Slonik Validation](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/slonik-zod.png)
+
+### Template Comment Prefix
+
+![Template Comment Prefix](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/raw-comment-prefixed.png)
 
 ## File Types
 
@@ -50,3 +61,5 @@ Pairs nicely with the following packages:
 ## Advanced Language Support
 
 None. This extension only offers syntax highlighting.
+
+Be sure to follow best practices documented in your database driver package of choice to mitigate [sql injection](https://owasp.org/www-community/attacks/SQL_Injection) vulnerabilities!
