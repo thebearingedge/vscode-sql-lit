@@ -22,6 +22,7 @@ declare const sql: {
   identifier: (names: string[]) => IdentifierSqlTokenType;
   Person: (strings: TemplateStringsArray, ...values: any[]) => Person
   type: (schema: any) => (strings: TemplateStringsArray, ...values: any[]) => Person
+  array: (values: any[], type: string) => unknown
 }
 
 const typed = sql<[{ one: number }]>`select 1 as "one"`
@@ -66,3 +67,16 @@ const rawCommentPrefixed = /* sql */`
     );
   end;
 `
+
+export async function test() {
+  console.log('test')
+}
+
+export function fooFailing() {
+  sql`select (${sql.array([1, 2, 3], 'int8')})`
+  console.log(`asdf`)
+}
+
+export async function test2() {
+  console.log('test')
+}

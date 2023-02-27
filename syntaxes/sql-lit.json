@@ -4,35 +4,34 @@
   "injectionSelector": "L:source -comment -string, L:markup.fenced_code.block.markdown (meta.embedded.block.javascript, meta.embedded.block.typescript, meta.embedded.block.typescriptreact, meta.embedded.block.vue)",
   "patterns": [
     {
-      "include": "#sql-template-literal"
+      "include": "#sql-lit-tag"
     },
     {
-      "include": "#sql-template-literal-comment"
+      "include": "#sql-lit-property-tag"
+    },
+    {
+      "include": "#sql-lit-higher-order-tag"
+    },
+    {
+      "include": "#sql-lit-comment"
     }
   ],
   "repository": {
-    "sql-template-literal": {
+    "sql-lit-tag": {
       "name": "meta.embedded.block.sql",
-      "begin": "(?i)(?:sql|db)\\w*\\s*(\\.[_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?(\\(.+\\))?(\\s*`)",
+      "begin": "(?i)(?:sql|db)\\w*\\s*(<.+>)?\\s*(`)",
       "beginCaptures": {
         "0": {
           "name": "entity.name.function.tagged-template.js"
         },
-        "2": {
+        "1": {
           "patterns": [
             {
               "include": "source.ts#type-arguments"
             }
           ]
         },
-        "3": {
-          "patterns": [
-            {
-              "include": "source.ts"
-            }
-          ]
-        },
-        "4": {
+        "2": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },
@@ -57,14 +56,21 @@
         }
       ]
     },
-    "sql-template-literal-comment": {
+    "sql-lit-property-tag": {
       "name": "meta.embedded.block.sql",
-      "begin": "(?i)(?:\\/\\*\\s*(?:sql|db)\\s*\\*\\/)(\\s*`)",
+      "begin": "(?i)(?:sql|db)\\w*\\s*\\.([_$[:alpha:]][_$[:alnum:]]*)?\\s*(<.+>)?\\s*(`)",
       "beginCaptures": {
-        "0": {
-          "name": "comment"
-        },
         "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "source.ts#type-arguments"
+            }
+          ]
+        },
+        "3": {
           "name": "punctuation.definition.string.template.begin.js string.template.js"
         }
       },
