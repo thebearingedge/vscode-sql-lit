@@ -13,14 +13,19 @@ Pairs nicely with the following packages:
 
 SQL syntax highlighting is triggered in a couple of ways:
 
-- tagged template literals via a `sql*` or `db*` identifier.
-- template literals via a `/* sql */` or `/* db */` comment prefix.
+- tagged template literals via a `sql*` or `db*` identifier
+- a `.sql` or `.db` method invoked as a template tag
+- template literal strings with a `/* sql */` or `/* db */` comment prefix
 
 ## Samples
 
 ### Basic Tag
 
 ![Basic Tag](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/tagged.png)
+
+### Tag Method
+
+![Tag Method](https://github.com/thebearingedge/vscode-sql-lit/raw/master/images/tag-method.png)
 
 ### Interpolated Values
 
