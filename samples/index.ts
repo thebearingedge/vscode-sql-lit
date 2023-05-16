@@ -12,14 +12,25 @@ const interpolated = sql`
    where "s"."one" = ${parseInt('1', 0)}
 `
 
+declare const client: {
+  sql: typeof sql
+  db: typeof sql
+}
+
+const sqlTagMethod = client.sql`
+  select 1 as "one"
+`
+
+const dbTagMethod = client.db`
+  select 1 as "one"
+`
+
 type Person = {}
 type IdentifierSqlTokenType = {}
 
-declare const personSchema: {}
-
 declare const sql: {
   <T>(strings: TemplateStringsArray, ...values: any[]): T
-  identifier: (names: string[]) => IdentifierSqlTokenType;
+  identifier: (names: string[]) => IdentifierSqlTokenType
   Person: (strings: TemplateStringsArray, ...values: any[]) => Person
   type: (schema: any) => (strings: TemplateStringsArray, ...values: any[]) => Person
 }
@@ -29,9 +40,11 @@ const typed = sql<[{ one: number }]>`select 1 as "one"`
 const slonik = sql`
   select 1
     from ${sql.identifier(['bar', 'baz'])}
-`;
+`
 
 const slonikTypegen = sql.Person`select * from person limit 2`;
+
+declare const personSchema: {}
 
 const slonikZod = sql.type(personSchema)`
   select "id",
@@ -66,3 +79,9 @@ const rawCommentPrefixed = /* sql */`
     );
   end;
 `
+
+declare const sqlWrite: typeof sql
+declare const dbReplica: typeof sql
+
+const sqlPrefix = sqlWrite`select * from "foo"`
+const dbPrefix = dbReplica`select * from "foo"`
